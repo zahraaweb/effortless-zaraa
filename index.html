@@ -39,12 +39,12 @@
       transform-origin: center;
     }
     #yesBtn {
-      background-color: #f0ffff;
-      color: white;
+      background-color: #deb887;
+      color: #fffff0;
     }
     #noBtn {
-      background-color: #f5f5dc;
-      color: #dcd7d1;
+      background-color: #deb887;
+      color: #fffff0;
     }
     #finalScreen {
       display: none;
@@ -84,22 +84,22 @@
     <img src="https://images.steamusercontent.com/ugc/85970797296227631/C8871AB3E0353D6E02A39577ADF574149B11B3E8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Smiley Meme " />
   </div>
   <div class="button-container">
-    <div class="yes-wrapper">
-      <button class="btn" id="yesBtn">ABSOLUTELY YES</button>
+    <div class="Be better-wrapper">
+      <button class="btn" id="Be betterBtn">Be better</button>
     </div>
-    <button class="btn" id="noBtn">noo :(</button>
+    <button class="btn" id="I'm over itBtn">I'm over it :(</button>
   </div>
 
   <div id="finalScreen">
-    <h2>Terimakasih sudah menerimanya 🫡</h2>
-    <img id="capturedImage" src="" alt="His lovely face" />
+    <h2>Terimakasih karna tidak menyerah, terimakasih sudah mau mencoba lagi dan lagi. Hidup bukan perihal siapa yang lebih dulu, tapi siapa yang bisa bertahan dan berkembang.</h2>
+    <img id="capturedImage" src="" alt="This is you who never give up" />
   </div>
 
   <canvas id="confettiCanvas" class="confetti"></canvas>
 
   <script>
-    const yesBtn = document.getElementById('yesBtn');
-    const noBtn = document.getElementById('noBtn');
+    const Be betterBtn = document.getElementById('Be betterBtn');
+    const I'm over itBtn = document.getElementById('I'm over itBtn');
     const finalScreen = document.getElementById('finalScreen');
     const capturedImage = document.getElementById('capturedImage');
     const buttonContainer = document.querySelector('.button-container');
@@ -108,20 +108,20 @@
     confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
 
-    let yesSize = 1;
-    const noTexts = [
-      "yaaah 😢", 
-      "yakin nih?", 
-      "gamau berubah pikiran ya? :()", 
+    let Be betterSize = 1;
+    const I'm over itTexts = [
+      "yaaah kenapa nyerah?", 
+      "yakin ga di coba lagi?", 
+      "kamu udah sejauh ini, masih mau nyerah? :()", 
       "coba pikirin lagi deh..",
-      "bisa jadi seru lho~", 
-      "sayang banget kalo ngelewatin gua", 
-      "kasih gua kesempatan dong 🥺", 
+      "kalo hidup jalannya lurus terus enak dong:(", 
+      "sayang banget kalo nyerah gitu aja", 
+      "kasih diri kamu kesempatan lagi untuk bangkit", 
       "please dipikirin lagi yaa",
-      "gua tungguin..", 
-      "gua bawa bunga nih 💐", 
-      "kesempatan terakhir yaa..", 
-      "oke deh... walau sebenernya gua maksa 😢"
+      "masa depan yang memang sulit di gapai", 
+      "coba pikirin kenapa kamu bisa sampai sejauh ini", 
+      "ayoo dong bangkit", 
+      "oke deh kalo gamau...tapi aku ada disini terus yaa, semoga kamu bisa bangkit "
     ];
 
     noBtn.addEventListener('click', () => {
