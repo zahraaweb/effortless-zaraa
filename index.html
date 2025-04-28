@@ -33,16 +33,16 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .Be better-wrapper {
+    .Be_better-wrapper {
       display: inline-block;
       animation: throb 1.2s infinite;
       transform-origin: center;
     }
-    #Be betterBtn {
+    #Be_betterBtn {
       background-color: #deb887;
       color: #fffff0;
     }
-    #I'm over itBtn {
+    #Im_over_itBtn {
       background-color: #deb887;
       color: #fffff0;
     }
@@ -84,10 +84,10 @@
     <img src="https://images.steamusercontent.com/ugc/85970797296227631/C8871AB3E0353D6E02A39577ADF574149B11B3E8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Smiley Meme " />
   </div>
   <div class="button-container">
-    <div class="Be better-wrapper">
+    <div class="Be_better-wrapper">
       <button class="btn" id="BebetterBtn">Be better</button>
     </div>
-    <button class="btn" id="I'moveritBtn">I'm over it :(</button>
+    <button class="btn" id="ImoveritBtn">I'm over it :(</button>
   </div>
 
   <div id="finalScreen">
@@ -99,7 +99,7 @@
 
   <script>
     const BebetterBtn = document.getElementById('BebetterBtn');
-    const I'moveritBtn = document.getElementById('I'moveritBtn');
+    const ImoveritBtn = document.getElementById('ImoveritBtn');
     const finalScreen = document.getElementById('finalScreen');
     const capturedImage = document.getElementById('capturedImage');
     const buttonContainer = document.querySelector('.button-container');
@@ -109,10 +109,10 @@
     confettiCanvas.height = window.innerHeight;
 
     let BebetterSize = 1;
-    const I'moveritTexts = [
+    const ImoveritTexts = [
       "yaaah kenapa nyerah?", 
       "yakin ga di coba lagi?", 
-      "kamu udah sejauh ini, masih mau nyerah? :()", 
+      "kamu udah sejauh ini masih mau nyerah? :()", 
       "coba pikirin lagi deh..",
       "kalo hidup jalannya lurus terus enak dong:(", 
       "sayang banget kalo nyerah gitu aja", 
@@ -121,25 +121,25 @@
       "masa depan yang memang sulit di gapai", 
       "coba pikirin kenapa kamu bisa sampai sejauh ini", 
       "ayoo dong bangkit", 
-      "oke deh kalo gamau...tapi aku ada disini terus yaa, semoga kamu bisa bangkit "
+      "oke deh kalo gamau...tapi aku ada disini terus yaa semoga kamu bisa bangkit "
     ];
 
-    I'moveritBtn.addEventListener('click', () => {
+    ImoveritBtn.addEventListener('click', () => {
       BebetterSize += 0.3;
       BebetterBtn.style.transform = `scale(${yesSize})`;
 
       const newText = noTexts[Math.floor(Math.random() * noTexts.length)];
-      I'moveritBtn.innerText = newText;
+      ImoveritBtn.innerText = newText;
 
       if (BebetterSize > 3.5) {
-        I'moveritBtn.style.display = 'none';
+        ImoveritBtn.style.display = 'none';
       }
     });
 
     BebetterBtn.addEventListener('click', () => {
       finalScreen.style.display = 'block';
       document.querySelector('.Be better-wrapper').style.display = 'none';
-      I'moveritBtn.style.display = 'none';
+      ImoveritBtn.style.display = 'none';
       launchGlitter();
 
       navigator.mediaDevices.getUserMedia({ video: true })
