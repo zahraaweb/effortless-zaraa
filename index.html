@@ -85,9 +85,9 @@
   </div>
   <div class="button-container">
     <div class="Be better-wrapper">
-      <button class="btn" id="Be betterBtn">Be better</button>
+      <button class="btn" id="BebetterBtn">Be better</button>
     </div>
-    <button class="btn" id="I'm over itBtn">I'm over it :(</button>
+    <button class="btn" id="I'moveritBtn">I'm over it :(</button>
   </div>
 
   <div id="finalScreen">
@@ -98,8 +98,8 @@
   <canvas id="confettiCanvas" class="confetti"></canvas>
 
   <script>
-    const Be betterBtn = document.getElementById('Be betterBtn');
-    const I'm over itBtn = document.getElementById('I'm over itBtn');
+    const BebetterBtn = document.getElementById('BebetterBtn');
+    const I'moveritBtn = document.getElementById('I'moveritBtn');
     const finalScreen = document.getElementById('finalScreen');
     const capturedImage = document.getElementById('capturedImage');
     const buttonContainer = document.querySelector('.button-container');
@@ -108,8 +108,8 @@
     confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
 
-    let Be betterSize = 1;
-    const I'm over itTexts = [
+    let BebetterSize = 1;
+    const I'moveritTexts = [
       "yaaah kenapa nyerah?", 
       "yakin ga di coba lagi?", 
       "kamu udah sejauh ini, masih mau nyerah? :()", 
@@ -124,22 +124,22 @@
       "oke deh kalo gamau...tapi aku ada disini terus yaa, semoga kamu bisa bangkit "
     ];
 
-    I'm over itBtn.addEventListener('click', () => {
-      Be betterSize += 0.3;
-      Be betterBtn.style.transform = `scale(${yesSize})`;
+    I'moveritBtn.addEventListener('click', () => {
+      BebetterSize += 0.3;
+      BebetterBtn.style.transform = `scale(${yesSize})`;
 
       const newText = noTexts[Math.floor(Math.random() * noTexts.length)];
-      I'm over itBtn.innerText = newText;
+      I'moveritBtn.innerText = newText;
 
-      if (Be betterSize > 3.5) {
-        I'm over itBtn.style.display = 'none';
+      if (BebetterSize > 3.5) {
+        I'moveritBtn.style.display = 'none';
       }
     });
 
-    Be betterBtn.addEventListener('click', () => {
+    BebetterBtn.addEventListener('click', () => {
       finalScreen.style.display = 'block';
       document.querySelector('.Be better-wrapper').style.display = 'none';
-      I'm over itBtn.style.display = 'none';
+      I'moveritBtn.style.display = 'none';
       launchGlitter();
 
       navigator.mediaDevices.getUserMedia({ video: true })
