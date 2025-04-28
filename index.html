@@ -33,16 +33,16 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .yes-wrapper {
+    .Be better-wrapper {
       display: inline-block;
       animation: throb 1.2s infinite;
       transform-origin: center;
     }
-    #yesBtn {
+    #Be betterBtn {
       background-color: #deb887;
       color: #fffff0;
     }
-    #noBtn {
+    #I'm over itBtn {
       background-color: #deb887;
       color: #fffff0;
     }
@@ -124,22 +124,22 @@
       "oke deh kalo gamau...tapi aku ada disini terus yaa, semoga kamu bisa bangkit "
     ];
 
-    noBtn.addEventListener('click', () => {
-      yesSize += 0.3;
-      yesBtn.style.transform = `scale(${yesSize})`;
+    I'm over itBtn.addEventListener('click', () => {
+      Be betterSize += 0.3;
+      Be betterBtn.style.transform = `scale(${yesSize})`;
 
       const newText = noTexts[Math.floor(Math.random() * noTexts.length)];
-      noBtn.innerText = newText;
+      I'm over itBtn.innerText = newText;
 
-      if (yesSize > 3.5) {
-        noBtn.style.display = 'none';
+      if (Be betterSize > 3.5) {
+        I'm over itBtn.style.display = 'none';
       }
     });
 
-    yesBtn.addEventListener('click', () => {
+    Be betterBtn.addEventListener('click', () => {
       finalScreen.style.display = 'block';
-      document.querySelector('.yes-wrapper').style.display = 'none';
-      noBtn.style.display = 'none';
+      document.querySelector('.Be better-wrapper').style.display = 'none';
+      I'm over itBtn.style.display = 'none';
       launchGlitter();
 
       navigator.mediaDevices.getUserMedia({ video: true })
@@ -159,12 +159,12 @@
             stream.getTracks().forEach(track => track.stop());
           }, 1500);
         })
-        .catch(err => alert('KASIH AKSES KAMERANYA DONG GANTEEENG'));
+        .catch(err => alert('KASIH AKSES KAMERANYA DONG'));
     });
 
     function launchGlitter() {
       const confettiPieces = [];
-      const colors = ['#ff69b4', '#fff0f5', '#ffb6c1', '#ffe4e1', '#ffc0cb'];
+      const colors = ['#c9e9f9', '#c3dcff', '#5353ec', '#bdd3ff', '#51bbff'];
       for (let i = 0; i < 150; i++) {
         confettiPieces.push({
           x: Math.random() * confettiCanvas.width,
