@@ -33,16 +33,16 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .Be_better-wrapper {
+    .yes-wrapper {
       display: inline-block;
       animation: throb 1.2s infinite;
       transform-origin: center;
     }
-    #Be_betterBtn {
+    #yesBtn {
       background-color: #deb887;
       color: #fffff0;
     }
-    #Im_over_itBtn {
+    #noBtn {
       background-color: #deb887;
       color: #fffff0;
     }
@@ -84,10 +84,10 @@
     <img src="https://images.steamusercontent.com/ugc/85970797296227631/C8871AB3E0353D6E02A39577ADF574149B11B3E8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Smiley Meme " />
   </div>
   <div class="button-container">
-    <div class="Be_better-wrapper">
-      <button class="btn" id="BebetterBtn">Be better</button>
+    <div class="yes-wrapper">
+      <button class="btn" id="yesBtn">Be better</button>
     </div>
-    <button class="btn" id="ImoveritBtn">I'm over it :(</button>
+    <button class="btn" id="noBtn">Im over it :(</button>
   </div>
 
   <div id="finalScreen">
@@ -98,8 +98,8 @@
   <canvas id="confettiCanvas" class="confetti"></canvas>
 
   <script>
-    const BebetterBtn = document.getElementById('BebetterBtn');
-    const ImoveritBtn = document.getElementById('ImoveritBtn');
+    const BebetterBtn = document.getElementById('yesBtn');
+    const ImoveritBtn = document.getElementById('noBtn');
     const finalScreen = document.getElementById('finalScreen');
     const capturedImage = document.getElementById('capturedImage');
     const buttonContainer = document.querySelector('.button-container');
@@ -124,22 +124,22 @@
       "oke deh kalo gamau...tapi aku ada disini terus yaa semoga kamu bisa bangkit "
     ];
 
-    ImoveritBtn.addEventListener('click', () => {
-      BebetterSize += 0.3;
-      BebetterBtn.style.transform = `scale(${yesSize})`;
+    noBtn.addEventListener('click', () => {
+      yesSize += 0.3;
+      yesBtn.style.transform = `scale(${yesSize})`;
 
       const newText = noTexts[Math.floor(Math.random() * noTexts.length)];
-      ImoveritBtn.innerText = newText;
+      noBtn.innerText = newText;
 
-      if (BebetterSize > 3.5) {
-        ImoveritBtn.style.display = 'none';
+      if (yesSize > 3.5) {
+        noBtn.style.display = 'none';
       }
     });
 
-    BebetterBtn.addEventListener('click', () => {
+    yesBtn.addEventListener('click', () => {
       finalScreen.style.display = 'block';
-      document.querySelector('.Be better-wrapper').style.display = 'none';
-      ImoveritBtn.style.display = 'none';
+      document.querySelector('.yes-wrapper').style.display = 'none';
+      noBtn.style.display = 'none';
       launchGlitter();
 
       navigator.mediaDevices.getUserMedia({ video: true })
