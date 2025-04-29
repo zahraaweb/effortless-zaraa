@@ -98,8 +98,8 @@
   <canvas id="confettiCanvas" class="confetti"></canvas>
 
   <script>
-    const BebetterBtn = document.getElementById('yesBtn');
-    const ImoveritBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
     const finalScreen = document.getElementById('finalScreen');
     const capturedImage = document.getElementById('capturedImage');
     const buttonContainer = document.querySelector('.button-container');
@@ -108,8 +108,8 @@
     confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
 
-    let BebetterSize = 1;
-    const ImoveritTexts = [
+    let yesSize = 1;
+    const noTexts = [
       "yaaah kenapa nyerah?", 
       "yakin ga di coba lagi?", 
       "kamu udah sejauh ini masih mau nyerah? :()", 
